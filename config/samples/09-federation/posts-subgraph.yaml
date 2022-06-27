@@ -90,20 +90,20 @@ spec:
     }
   sdl: |
     extend type Query {
-        post(id: ID!): Post!
-        posts: [Post!]!
+      post(id: ID!): Post!
+      posts: [Post!]!
     }
 
     type Post @key(fields: "id") {
-        id: ID!
-        userId: ID!
-        title: String!
-        body: String!
+      id: ID!
+      userId: ID!
+      title: String!
+      body: String!
     }
 
     extend type User @key(fields: "id") {
-        id: ID! @external
-        posts: [Post!]!
+      id: ID! @external
+      posts: [Post!]!
     }
 
 ---
